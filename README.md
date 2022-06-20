@@ -23,5 +23,5 @@ docker-compose up
 It should run on [localhost:8000](http://localhost:8000).
 
 ### Additional features
-This API implements creating of PostgreSQL database for storing usage history with the help of SQLAlchemy. You can test this feature in [Swagger UI](http://localhost:8000/docs#/default/create_history_history_add_post "Swagger UI") and see the full database in [localhost/history](http://localhost:8000/history "localhost/history").
-There is also a simple HTTP authentitacion. You can test it by clicking a link on an index page.
+This API implements creating of PostgreSQL database for storing usage history with the help of SQLAlchemy. You can test this feature in [Swagger UI](http://localhost/docs#/default/create_history_history_add_post "Swagger UI") and see the full database in [localhost/history](http://localhost/history "localhost/history").
+There is also a simple HTTP authentication. You can test it by clicking a link on an index page.
