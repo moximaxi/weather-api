@@ -1,5 +1,5 @@
 # Weather API
-Small API telling temperature and weather description in city of your choice using FastAPI.
+Small API telling temperature and weather description in location of your choice using FastAPI.
 
 ### Requirements
 To install required packages use:
@@ -14,12 +14,14 @@ uvicorn main:app --reload
 ```
 It should run on [localhost](http://localhost).
 
-### Building a docker image
-To build a docker image use: 
+### Running using docker-compose
+To build and run docker-compose containers use: 
 ```
-docker build -t weatherapp .
-docker run -d --name weathercontainer -p 80:80 weatherapp
+docker-compose build
+docker-compose up
 ```
+It should run on [localhost:8000](http://localhost:8000).
 
-### Database for usage history
-This API implements creating of SQLite database for storing usage history with the help of SQLAlchemy. There is no front-end support for this, however you can test this feature in [Swagger UI](http://localhost/docs#/default/create_history_history_add_post "Swagger UI") and see the full database in [localhost/history](http://localhost/history "localhost/history")
+### Additional features
+This API implements creating of PostgreSQL database for storing usage history with the help of SQLAlchemy. You can test this feature in [Swagger UI](http://localhost:8000/docs#/default/create_history_history_add_post "Swagger UI") and see the full database in [localhost/history](http://localhost:8000/history "localhost/history").
+There is also a simple HTTP authentitacion. You can test it by clicking a link on an index page.

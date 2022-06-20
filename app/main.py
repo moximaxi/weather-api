@@ -1,5 +1,5 @@
 import fastapi
-import uvicorn
+
 from views import home
 from views import weather_api
 from views import history

@@ -7,13 +7,23 @@
     </head>
     <body>
         <h1>Get Your Weather</h1>
-        <form method="get" action="http://localhost/api/weather">
-            <div>Enter your country and city.</div><br>
-            <label for="country">Country code (US, RU, etc.):</label><br>
-            <input type="text" name="country"><br>
+        <div>Enter your city to see temperature and weather description.</div>
+        <div>Alternatively, you can use latitude and longitude coordinates (example: 55.75, 37.61).</div>
+        <br>
+        <form method="get" action="http://localhost:8000/api/weather">
             <label for="city">City:</label><br>
             <input type="text" name="city"><br><br>
             <input type="submit" value="Submit">
         </form>
+        <br>
+        <form method="get" action="http://localhost:8000/api/weather/coords">
+            <label for="lat">Latitude:</label><br>
+            <input type="text" name="lat"><br>
+            <label for="lat">Longitude:</label><br>
+            <input type="text" name="lon"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <div><a href="http://localhost:8000/login">Simple HTTP authentication.</a></div>
     </body>
 </html>

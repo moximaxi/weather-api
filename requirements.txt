@@ -4,3 +4,4 @@ starlette
 httpx
 sqlalchemy
 jinja2
+psycopg2
