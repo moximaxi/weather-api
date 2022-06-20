@@ -11,7 +11,15 @@
         <div>Alternatively, you can use latitude and longitude coordinates (example: 55.75, 37.61).</div>
         <br>
         <form method="get" action="http://localhost:8000/api/weather">
+            <label for="city">Country code (RU, US, etc.):</label><br>
+            <input type="text" name="country"><br>
             <label for="city">City:</label><br>
+            <input type="text" name="city"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <form method="get" action="http://localhost:8000/api/weather">
+            <label for="city">Just city (only works for major cities):</label><br>
             <input type="text" name="city"><br><br>
             <input type="submit" value="Submit">
         </form>

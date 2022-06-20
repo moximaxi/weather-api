@@ -17,8 +17,11 @@ router = fastapi.APIRouter()
 @router.get('/api/weather', response_class = HTMLResponse)
 async def weather(request: Request, location: Location = fastapi.Depends()):
     """Get weather data with city name"""
-    url = f'https://weather.talkpython.fm/api/weather?city={location.city}'
-
+    if location.country == None:
+        url = f'https://weather.talkpython.fm/api/weather?city={location.city}'
+    else:
+        url = f'https://weather.talkpython.fm/api/weather?city={location.city}&country={location.country}'
+    
     async with httpx.AsyncClient() as client:
         resp = await client.get(url)
         resp.raise_for_status()
